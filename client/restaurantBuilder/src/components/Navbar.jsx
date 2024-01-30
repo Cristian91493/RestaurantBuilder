@@ -26,15 +26,24 @@ function Navbar({ username, setUser }) {
           <li onClick={logout}>
             <Link to="/login">Logout</Link>
           </li>
+          <li>
+            <Link to="/seeReservations">See Reservations</Link>
+          </li>
         </>
        : 
         <>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/reservations">Reservations</Link>
           </li>
           <li>
-            <Link to="/register">Register</Link>
+            <Link to="/menu">Menu</Link>
           </li>
+          <li>
+            <Link to="/aboutus">About Us</Link>
+          </li>
+
+
+
         </>
       }
     </ul>

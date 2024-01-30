@@ -9,6 +9,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import Reservation from "./pages/Reservation";
+import seeReservations from "./pages/seeReservations";
+import Aboutus from "./pages/aboutus";
+import Menu from "./pages/menu";
+
 
 import "./App.css";
 
