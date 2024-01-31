@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import Reservation from "./pages/Reservation";
+import ReservationSuccess from "./pages/ReservationSuccess";
 import seeReservations from "./pages/seeReservations";
 import Aboutus from "./pages/aboutus";
 import Menu from "./pages/menu";
@@ -18,7 +19,25 @@ import Menu from "./pages/menu";
 import "./App.css";
 
 
+
 function App() {
+
+  // useEffect(()=>{
+  
+  //   const test = async () => {
+  //     try {
+  //       const response = await axios.get('/api/test')
+  //       console.log(response)
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  
+  //   }
+  //   test()
+  //   setTest(response.data)
+  // },[])
+
+
   const [user, setUser] = useState({});
   const [reservations, setReservations] = useState({});
   // we need time to check if token is loaded in to state, not just localStorage
@@ -42,24 +61,26 @@ function App() {
 
 
 
-  async function addReservations() {
-    try {
+  // async function addReservations() {
+  //   try {
 
-      let reservation = {
-        text: input
-      };
+  //     let reservation = {
+  //       text: input
+  //     };
 
-      // OPTION 2: use axios
+  //     // OPTION 2: use axios
 
-      const response = await axios.post('/api/reservations', reservations)
+  //     const response = await axios.post('/api/reservations/reservations', reservations)
+  //     const navigate = useNavigate();
 
-      setReservations([...reservations, response.data]);
-      setInput("");
+  //     setReservations([...reservations, response.data]);
+  //     setInput("");
+  //     Navigate('/reservationsuccess')
 
-    } catch(err) {
-      console.log(err)
-    }
-  }
+  //   } catch(err) {
+  //     console.log(err)
+  //   }
+  // }
 
 
 
@@ -94,11 +115,12 @@ function App() {
         ) : (
           <>
             {/* if not logged in */}
+            <Route path="/reservations" element={<Reservation setReservations={setReservations}/>}/>
+            <Route path="/reservationsuccess" element={<ReservationSuccess/>} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
        
-            <Route path="/reservations" element={<Reservation addReservations={addReservations}/>}/>
-
+            {/* <Route path="/reservationsucess" element={<ReservationSucces />}/> */}
             {/* wild card * meaning anything thats not above, get this element = Navigate is like a redirect, not link  */}
             {/* can be path=* or path=/profile  one excludes all others not name, the other is just /profile locked down */}
 
