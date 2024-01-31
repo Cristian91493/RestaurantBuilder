@@ -9,6 +9,7 @@ mongoConfig()
 
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
+const reservationsRoutes = require('./routes/reservationsRoutes')
 // middleware
 const { authorize } = require('./middleware/authMiddleware')
 
@@ -32,6 +33,8 @@ app.use('/auth', authRoutes)
 // you could also put them inside specific routes inside the routes folder
 
 app.use('/api/users', authorize, userRoutes)
+
+app.use('/api/reservations', reservationsRoutes)
 
 app.listen(PORT, () => {
     console.log('Listening on port: ' + PORT)

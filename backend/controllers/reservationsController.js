@@ -1,21 +1,29 @@
 const Reservations = require("../models/Reservations");
 
-async function post(req, res) {
+async function resPost(req, res) {
   console.log("POST /api/reservations");
-app.post('/api/reservations', async (req, res) => {
-    try {
-        console.log('POST /api/reservations')
-        console.log(req.body)
-        const reservations = await Reservations.create(req.body)
-        res.status(200).json(reservations)
-    } catch(err) {
-        console.log(err.message)
-        res.status(400).json(err)
-    }
-})
+  try {
+    console.log('POST /api/reservations');
+    console.log(req.body);
 
+    const { firstName, lastName, date, time, phoneNum, email } = req.body;
+
+    const reservation = await Reservations.create({
+      firstName,
+      lastName,
+      date,
+      time,
+      phoneNum,
+      email,
+    });
+
+    res.status(200).json(reservation);
+  } catch (err) {
+    console.log(err.message);
+    res.status(400).json(err);
+  }
 }
 
 module.exports = {
-  post,
+  resPost,
 };

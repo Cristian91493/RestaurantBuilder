@@ -5,8 +5,8 @@ const Schema = mongoose.Schema
 const reservationsSchema = new Schema({
     firstName: {
         type: String,
-        required: true,
-        unique: true
+        required: true
+        
     },
     lastName: {
         type: String, 

@@ -131,17 +131,6 @@ function Reservation({ setReservations }) {
         />
         <br />
         <br />
-        <label htmlFor="password">Password:</label>
-        <br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          onChange={handleChange}
-          value={form.password}
-        />
-        <br />
-        <br />
         <button>Submit</button>
       </form>
     </>
