@@ -19,11 +19,13 @@ function Reservation({ setReservations }) {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    console.log(form)
   };
 
   // this is where we start getting data back from server
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form Data:", form);
     try {
       // vite.config has proxy already setup
       // fetch a post request(path, data)

@@ -40,21 +40,6 @@ function App() {
     setLoading(false);
   }
 
-  // grab user from database with token as ID
-  // async function setReservations(token) {
-  //   try {
-  //     const response = await axios.get("/api/reservations", {
-  //       headers: {
-  //         Authorization: token,
-  //       },
-  //     });
-  //     setReservations(response.data);
-  //   } catch (err) {
-  //     console.log(err);
-  //     localStorage.removeItem("token");
-  //   }
-  //   setLoading(false);
-  // }
 
 
   async function addReservations() {
@@ -76,9 +61,7 @@ function App() {
     }
   }
 
-  // function handleChange(event) {
-  //   setInput(event.target.value);
-  // }
+
 
 
 
@@ -113,7 +96,7 @@ function App() {
             {/* if not logged in */}
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
-            {/* <Route path="/reservations" element={<Register setUser={setUser} />} /> */}
+       
             <Route path="/reservations" element={<Reservation addReservations={addReservations}/>}/>
 
             {/* wild card * meaning anything thats not above, get this element = Navigate is like a redirect, not link  */}
