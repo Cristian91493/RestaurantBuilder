@@ -17,8 +17,10 @@ import Menu from "./pages/menu";
 
 import "./App.css";
 
+
 function App() {
   const [user, setUser] = useState({});
+  // const [reservations, setReservations] = useState({});
   // we need time to check if token is loaded in to state, not just localStorage
   const [loading, setLoading] = useState(true);
 
@@ -67,7 +69,9 @@ function App() {
             {/* if not logged in */}
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
-            <Route path="/reservation" element={<Reservation/>}/>
+            <Route path="/reservations" element={<Register setUser={setUser} />} />
+            {/* <Route path="/reservation" element={<Reservation/>}/> */}
+
             {/* wild card * meaning anything thats not above, get this element = Navigate is like a redirect, not link  */}
             {/* can be path=* or path=/profile  one excludes all others not name, the other is just /profile locked down */}
 

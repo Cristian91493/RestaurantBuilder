@@ -12,7 +12,7 @@ let emptyForm = {
   email: "",
 };
 
-function Reservation({ setUser }) {
+function Reservation({ setReservations }) {
   const navigate = useNavigate();
 
   let [form, setForm] = useState(emptyForm);
@@ -28,7 +28,7 @@ function Reservation({ setUser }) {
       // vite.config has proxy already setup
       // fetch a post request(path, data)
       console.log(form); // {username: 'Bob', password: 'pas123', email: 'bob@gmail.com'}
-      const response = await axios.post("/auth/register", form);
+      const response = await axios.post("/reservations", form);
       // axios formats the response to json already for us
       // data.token should give us the token string, encrypted
       const token = response.data.token;
@@ -48,11 +48,11 @@ function Reservation({ setUser }) {
       // vite.config has the proxy before
       // as long as we send the token with this, we don't need a req.boy/param to query a specific user
       // we can't get to this route without the middleware, which is why we need the header to check for a token
-      const userResponse = await axios.get("/api/users", {
+      const reservationsResponse = await axios.get("/api/reservations", {
         headers: { Authorization: token },
       });
-      setUser(userResponse.data);
-      navigate("/profile");
+      setReservations(reservationsResponse.data);
+      navigate("/");
     } catch (err) {
       console.log(err.response.data.error);
       alert(err.response.data.error);
@@ -61,20 +61,62 @@ function Reservation({ setUser }) {
 
   return (
     <>
-      <h1>Register</h1>
+      <h1>Reservations</h1>
       <form
         onSubmit={handleSubmit}
         // what this is creating from input's names:
         // {username: 'asd', password: 'pas123', email: 'bob@gmail.com'}
       >
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="reservations">Reservations:</label>
         <br />
         <input
           type="text"
-          id="username"
-          name="username"
+          id="firstName"
+          name="firstName"
           onChange={handleChange}
-          value={form.username}
+          value={form.firstName}
+        />
+        <br />
+        <br />
+        <label htmlFor="lastName">Last Name:</label>
+        <br />
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          onChange={handleChange}
+          value={form.lastName}
+        />
+           <br />
+        <label htmlFor="date">Date:</label>
+        <br />
+        <input
+          type="text"
+          id="date"
+          name="date"
+          onChange={handleChange}
+          value={form.date}
+        />
+           <br />
+        <label htmlFor="time">Time:</label>
+        <br />
+        <input
+          type="text"
+          id="time"
+          name="time"
+          onChange={handleChange}
+          value={form.time}
+        />
+        <br />
+        <br />
+        <label htmlFor="phoneNum">Phone Number:</label>
+        <br />
+        <input
+          type="text"
+          id="phoneNum"
+          name="phoneNum"
+          onChange={handleChange}
+          value={form.phoneNum}
         />
         <br />
         <br />
