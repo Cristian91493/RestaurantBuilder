@@ -67,6 +67,7 @@ function App() {
             {/* if not logged in */}
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
+            <Route path="/reservation" element={<Reservation/>}/>
             {/* wild card * meaning anything thats not above, get this element = Navigate is like a redirect, not link  */}
             {/* can be path=* or path=/profile  one excludes all others not name, the other is just /profile locked down */}
 
