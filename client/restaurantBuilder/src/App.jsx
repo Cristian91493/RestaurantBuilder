@@ -20,7 +20,7 @@ import "./App.css";
 
 function App() {
   const [user, setUser] = useState({});
-  // const [reservations, setReservations] = useState({});
+  const [reservations, setReservations] = useState({});
   // we need time to check if token is loaded in to state, not just localStorage
   const [loading, setLoading] = useState(true);
 
@@ -39,6 +39,50 @@ function App() {
     }
     setLoading(false);
   }
+
+  // grab user from database with token as ID
+  // async function setReservations(token) {
+  //   try {
+  //     const response = await axios.get("/api/reservations", {
+  //       headers: {
+  //         Authorization: token,
+  //       },
+  //     });
+  //     setReservations(response.data);
+  //   } catch (err) {
+  //     console.log(err);
+  //     localStorage.removeItem("token");
+  //   }
+  //   setLoading(false);
+  // }
+
+
+  async function addReservations() {
+    try {
+
+      let reservation = {
+        text: input
+      };
+
+      // OPTION 2: use axios
+
+      const response = await axios.post('/api/reservations', reservations)
+
+      setReservations([...reservations, response.data]);
+      setInput("");
+
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
+  // function handleChange(event) {
+  //   setInput(event.target.value);
+  // }
+
+
+
+
 
   useEffect(() => {
     // look for token in localstorage if we are logged in.
@@ -69,8 +113,8 @@ function App() {
             {/* if not logged in */}
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
-            <Route path="/reservations" element={<Register setUser={setUser} />} />
-            {/* <Route path="/reservation" element={<Reservation/>}/> */}
+            {/* <Route path="/reservations" element={<Register setUser={setUser} />} /> */}
+            <Route path="/reservations" element={<Reservation addReservations={addReservations}/>}/>
 
             {/* wild card * meaning anything thats not above, get this element = Navigate is like a redirect, not link  */}
             {/* can be path=* or path=/profile  one excludes all others not name, the other is just /profile locked down */}

@@ -67,7 +67,7 @@ function Reservation({ setReservations }) {
         // what this is creating from input's names:
         // {username: 'asd', password: 'pas123', email: 'bob@gmail.com'}
       >
-        <label htmlFor="reservations">Reservations:</label>
+        <label htmlFor="firstName">First Name:</label>
         <br />
         <input
           type="text"
