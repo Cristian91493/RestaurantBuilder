@@ -32,6 +32,7 @@ function Login({ setUser }) {
       }
       localStorage.setItem("token", token);
       const userResponse = await axios.get(baseURL+"/api/users", {
+
         headers: { Authorization: token },
       });
       setUser(userResponse.data);

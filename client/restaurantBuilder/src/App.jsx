@@ -29,6 +29,7 @@ function App() {
   async function getUser(token) {
     try {
       const response = await axios.get(baseURL+"/api/users", {
+
         headers: {
           Authorization: token,
         },
@@ -60,6 +61,7 @@ function App() {
     async function getReservations(){
       try {
         const response = await axios.get(baseURL+"/api/seereservations/seeReservations")
+        
         setSeeReservations(response.data);
         // console.log("line64",seeReservations)
       } catch(err) {

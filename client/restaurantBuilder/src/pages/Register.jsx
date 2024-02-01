@@ -27,6 +27,7 @@ function Register({ setUser }) {
       // fetch a post request(path, data)
       console.log(form); // {username: 'Bob', password: 'pas123', email: 'bob@gmail.com'}
       const response = await axios.post(baseURL+"/auth/register", form);
+      
       // axios formats the response to json already for us
       // data.token should give us the token string, encrypted
       const token = response.data.token;
