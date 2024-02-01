@@ -2,6 +2,7 @@ import axios from "axios";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import baseURL from "../../Api";
 
 let emptyForm = {
   username: "",
@@ -25,7 +26,7 @@ function Register({ setUser }) {
       // vite.config has proxy already setup
       // fetch a post request(path, data)
       console.log(form); // {username: 'Bob', password: 'pas123', email: 'bob@gmail.com'}
-      const response = await axios.post("/auth/register", form);
+      const response = await axios.post(baseURL+"/auth/register", form);
       // axios formats the response to json already for us
       // data.token should give us the token string, encrypted
       const token = response.data.token;
@@ -45,7 +46,7 @@ function Register({ setUser }) {
       // vite.config has the proxy before
       // as long as we send the token with this, we don't need a req.boy/param to query a specific user
       // we can't get to this route without the middleware, which is why we need the header to check for a token
-      const userResponse = await axios.get("/api/users", {
+      const userResponse = await axios.get(baseURL+"/api/users", {
         headers: { Authorization: token },
       });
       setUser(userResponse.data);

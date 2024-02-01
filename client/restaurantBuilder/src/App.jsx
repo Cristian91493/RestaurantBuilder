@@ -14,7 +14,7 @@ import SeeReservations from "./pages/SeeReservations";
 import Aboutus from "./pages/aboutus";
 import Menu from "./pages/menu";
 import "./App.css";
-
+import baseURL from '/Api'
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
   // grab user from database with token as ID
   async function getUser(token) {
     try {
-      const response = await axios.get("/api/users", {
+      const response = await axios.get(baseURL+"/api/users", {
         headers: {
           Authorization: token,
         },
@@ -59,7 +59,7 @@ function App() {
     useEffect(()=>{
     async function getReservations(){
       try {
-        const response = await axios.get("/api/seereservations/seeReservations")
+        const response = await axios.get(baseURL+"/api/seereservations/seeReservations")
         setSeeReservations(response.data);
         // console.log("line64",seeReservations)
       } catch(err) {

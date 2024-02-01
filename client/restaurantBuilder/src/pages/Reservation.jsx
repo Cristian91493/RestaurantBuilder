@@ -28,7 +28,7 @@ function Reservation({ setReservations }) {
     console.log("Form Data:", form);
     try {
       // Fetch a post request (path, data)
-      const response = await axios.post("/api/reservations/reservations", form);
+      const response = await axios.post(baseURL+"/api/reservations/reservations", form);
       console.log(response);
   
       // Update reservations state if setReservations is defined
