@@ -38,7 +38,7 @@ app.use('/api/users', authorize, userRoutes)
 
 app.use('/api/reservations', reservationsRoutes)
 
-app.use('/api/seeReservations', seeReservationsRoutes)
+app.use('/api/seereservations', seeReservationsRoutes)
 
 app.listen(PORT, () => {
     console.log('Listening on port: ' + PORT)

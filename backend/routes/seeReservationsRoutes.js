@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const userCtrl = require('../controllers/seeReservationsController')
+const seeReservationsCtrl = require('../controllers/seeReservationsController')
 
-router.get('/', seeReservationsCtrl.show)
+router.get('/seereservations', seeReservationsCtrl.showReservations)
 
 module.exports = router
