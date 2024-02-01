@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import baseURL from "../../Api";
+import baseURL from "../../../Api";
 
 let emptyForm = {
   username: "",
