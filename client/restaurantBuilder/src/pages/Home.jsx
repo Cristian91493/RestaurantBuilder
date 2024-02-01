@@ -1,7 +1,7 @@
 function Home() {
     return ( 
         <div className="App">
-            <div className="bg-home">
+            <div className="home-bg">
 
             <h1>Home</h1>
             </div>

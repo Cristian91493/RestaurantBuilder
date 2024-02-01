@@ -20,10 +20,11 @@ ul {
 }
 
 .home-bg{
-  background-image: url(./assets/backgroundPic/background.jpg);;
-  width: 200px;
-  height:200px;
+  background-image: url(./assets/backgroundPic/background2.jpg);;
+  width: 100vh;
+  height:100vh;
   background-size: cover;
+  
 }
 
 .app {
