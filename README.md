@@ -1,0 +1,1 @@
+Restaurant owners struggle with all the high tech services that 

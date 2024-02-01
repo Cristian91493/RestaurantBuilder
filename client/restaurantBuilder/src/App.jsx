@@ -11,8 +11,8 @@ import Register from "./pages/Register";
 import Reservation from "./pages/Reservation";
 import ReservationSuccess from "./pages/ReservationSuccess";
 import SeeReservations from "./pages/SeeReservations";
-import Aboutus from "./pages/aboutus";
-import Menu from "./pages/menu";
+import Aboutus from "./pages/Aboutus";
+import Menu from "./pages/Menu";
 import "./App.css";
 import baseURL from '/Api'
 
