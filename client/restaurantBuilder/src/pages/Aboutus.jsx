@@ -1,5 +1,5 @@
 import React from 'react'
-
+//add scrolling to it when the window changes
 const Aboutus = () => {
   return (
     <div className='App'>

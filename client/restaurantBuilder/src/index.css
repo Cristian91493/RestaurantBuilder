@@ -30,7 +30,7 @@ body {
   width: 100%;
 }
 html, body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 html {
   height: 100%; /* Set height to 100% of viewport height */
