@@ -1,10 +1,17 @@
 function Home() {
     return ( 
         <div className="App">
-            <div className="home-bg">
+          
 
-            <h1>Home</h1>
-            </div>
+                <div className="home-bg">
+<div className="button-container">
+
+                    <button className="home-res">Reserve</button>
+</div>
+
+                </div>
+
+            
         </div>
      );
 }

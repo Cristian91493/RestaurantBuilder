@@ -11,6 +11,7 @@ function Navbar({ username, setUser }) {
   };
 
   return (
+    <nav className="nav-bar">
     <ul>
       <li>
         <Link to="/">
@@ -32,13 +33,13 @@ function Navbar({ username, setUser }) {
         </>
        : 
         <>
-          <li>
+          <li className="nav-li">
             <Link to="/reservations">Reservations</Link>
           </li>
-          <li>
+          <li className="nav-li">
             <Link to="/menu">Menu</Link>
           </li>
-          <li>
+          <li className="nav-li">
             <Link to="/aboutus">About Us</Link>
           </li>
 
@@ -47,6 +48,7 @@ function Navbar({ username, setUser }) {
         </>
       }
     </ul>
+    </nav>
   );
 }
 

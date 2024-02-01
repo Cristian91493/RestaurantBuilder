@@ -29,7 +29,9 @@ body {
   min-height: 100vh; /* Set minimum height to 100% of viewport height */
   width: 100%;
 }
-
+html, body {
+  overflow: hidden;
+}
 html {
   height: 100%; /* Set height to 100% of viewport height */
   width: 100%;
