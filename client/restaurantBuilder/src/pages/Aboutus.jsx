@@ -2,7 +2,9 @@ import React from 'react'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className='App'>
+<div className="aboutus-bg">
+<div className="aboutus-content">
       <h1>About Us</h1>
 Welcome to Celeste, where culinary excellence meets the freshness of the farm. Our passion for exceptional food, sustainable practices, and a genuine connection to local farmers defines our commitment to providing you with an unforgettable dining experience.
 
@@ -24,6 +26,8 @@ We are committed to minimizing our environmental footprint. From utilizing eco-f
 Join us at Celeste for a dining experience that goes beyond the ordinary – a celebration of local flavors, culinary expertise, and the shared joy of savoring exceptional food together.
 
 Thank you for choosing Celeste – where farm-to-table isn't just a trend; it's a way of life.
+    </div>
+    </div>
     </div>
   )
 }
