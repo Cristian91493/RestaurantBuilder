@@ -11,11 +11,19 @@ ul {
   height: 50px;
 }
 
+
 #icon {
   position: absolute;
   height: 40px;
   top: 5px;
   left: 5%;
+}
+
+.home-bg{
+  background-image: url(./assets/backgroundPic/background.jpg);;
+  width: 200px;
+  height:200px;
+  background-size: cover;
 }
 
 .app {
@@ -35,5 +43,5 @@ h1 {
 }
 
 ul {
-  background-color: #61dafb;
+  background-color: #f1f1f1;
 }

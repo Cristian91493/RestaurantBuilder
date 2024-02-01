@@ -82,13 +82,15 @@ function App() {
             <Route path="/profile" element={<Profile username={user.username} email={user.email} />} />
             {/* this will actually render for a sec, then redirect. Fixed to cond. load if we are not loading  */}
             {!loading && <Route path="/login" element={<Navigate to="/" />} />}
+            <Route path="/seereservations" element={<SeeReservations reservations = {seeReservations} />} />
           </>
         ) : (
           <>
             {/* if not logged in */}
-             <Route path="/seereservations" element={<SeeReservations reservations = {seeReservations} />} />
             <Route path="/reservations" element={<Reservation setReservations={setReservations}/>}/>
             <Route path="/reservationsuccess" element={<ReservationSuccess/>} />
+            <Route path="/aboutus" element={<Aboutus/>} />
+            <Route path="/menu" element={<Menu/>} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
        

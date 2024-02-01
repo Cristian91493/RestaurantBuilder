@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import icon from '../assets/react.svg'
+import icon from '../assets/logoPic/logo.jpg'
 
 function Navbar({ username, setUser }) {
 
@@ -14,7 +14,7 @@ function Navbar({ username, setUser }) {
     <ul>
       <li>
         <Link to="/">
-          {/* <img src={icon} alt="React Icon" id="icon" /> */}
+          <img src={icon} alt="React Icon" id="icon" />
         </Link>
       </li>
       {username ? 
