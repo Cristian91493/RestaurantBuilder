@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import icon from '../assets/logoPic/logo.jpg'
-
+import instagramlogo from '../assets/logoPic/instagramLogo.png'
 function Navbar({ username, setUser }) {
 
   const logout = () => {
@@ -44,6 +44,10 @@ function Navbar({ username, setUser }) {
             <Link to="/aboutus">
               <li className="nav-li">About Us</li>
             </Link>
+
+            <Link  target="_blank" to="https://www.instagram.com/gideonridgeinn/">
+            <img src={instagramlogo} alt="React Icon" id="instagram" />
+          </Link>
           </>
         )}
       </ul>

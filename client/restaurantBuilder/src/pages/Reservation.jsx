@@ -48,9 +48,11 @@ function Reservation({ setReservations }) {
 
   return (
     <>
+    <div className="res-bg">
+      <div className="form-container">
       <h1>Reservations</h1>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit} 
         // what this is creating from input's names:
         // {username: 'asd', password: 'pas123', email: 'bob@gmail.com'}
       >
@@ -118,8 +120,10 @@ function Reservation({ setReservations }) {
         />
         <br />
         <br />
-        <button>Submit</button>
+        <button className="home-res">Submit</button>
       </form>
+      </div>
+      </div>
     </>
   );
 }

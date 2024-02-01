@@ -32,6 +32,13 @@ ul {
   top: 5px;
   left: 5%;
 }
+#instagram {
+  position: absolute;
+  height: 40px;
+  top: 5px;
+  right: 5%;
+  opacity: 50%;
+}
 .home-bg, .nav-bar {
   margin: 0;
   padding: 0;
@@ -108,15 +115,33 @@ ul {
 .aboutus-bg{
   background-image: url(./assets/aboutUsPic/aboutus.jpg);;
   background-attachment: fixed;
-  height:120vh;
+  height:130vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin:0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
+}
+
+.res-bg{
+  background-image: url(./assets/reservationPic/reservations.jpg);;
+  background-attachment: fixed;
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.form-container{
+  background-color:rgba(0, 0, 0, 0.0);
+  padding: 50px;
+  border-radius: 10%;
 }
 
 .aboutus-content{
@@ -139,7 +164,6 @@ ul {
   border-style: solid;
   border-color: white;
   border-width: 1px;
-  background-color: rgba(255, 255, 255, 0); /* Red button with 50% opacity */
   color: #ffffff; /* Text color */
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 0%;
@@ -161,6 +185,10 @@ ul {
 
 form {
   text-align: center;
+}
+
+input{
+  background-color: #ffffff;
 }
 
 h1 {
