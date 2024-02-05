@@ -1,3 +1,5 @@
+The Pitch
+
 Restaurant owners struggle with all the high tech services that they need to run their businesses. You have countless POS(point-of-sales) systems, the credit card processing jaugernauts, scheduling software. Least of all all the website options that they just can't understand how to make it work.
 
 This product is an all in one solution for busy restaurant owners. This website has the ability to take reservations. Reservations cost $2 dollars every time they are made from Resy. It's a big expense for business owners. This is going to solve that problem for you. 
