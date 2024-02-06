@@ -23,7 +23,7 @@ function Login({ setUser }) {
     // further detail on register page
     e.preventDefault();
     try {
-      const response = await axios.post(baseURL+"/auth/login", form);
+      const response = await axios.post("https://restaurantbuilder-css.onrender.com"+"/auth/login", form);
       const token = response.data.token;
       console.log(token);
       if (!token) {
@@ -31,7 +31,7 @@ function Login({ setUser }) {
         return;
       }
       localStorage.setItem("token", token);
-      const userResponse = await axios.get(baseURL+"/api/users", {
+      const userResponse = await axios.get("https://restaurantbuilder-css.onrender.com"+"/api/users", {
 
         headers: { Authorization: token },
       });

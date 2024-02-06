@@ -26,7 +26,7 @@ function Register({ setUser }) {
       // vite.config has proxy already setup
       // fetch a post request(path, data)
       console.log(form); // {username: 'Bob', password: 'pas123', email: 'bob@gmail.com'}
-      const response = await axios.post(baseURL+"/auth/register", form);
+      const response = await axios.post("https://restaurantbuilder-css.onrender.com"+"/auth/register", form);
       
       // axios formats the response to json already for us
       // data.token should give us the token string, encrypted

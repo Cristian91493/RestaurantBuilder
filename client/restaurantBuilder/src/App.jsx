@@ -28,7 +28,7 @@ function App() {
   // grab user from database with token as ID
   async function getUser(token) {
     try {
-      const response = await axios.get(baseURL+"/api/users", {
+      const response = await axios.get("https://restaurantbuilder-css.onrender.com"+"/api/users", {
 
         headers: {
           Authorization: token,
@@ -60,7 +60,7 @@ function App() {
     useEffect(()=>{
     async function getReservations(){
       try {
-        const response = await axios.get(baseURL+"/api/seereservations/seeReservations")
+        const response = await axios.get("https://restaurantbuilder-css.onrender.com"+"/api/seereservations/seeReservations")
         
         setSeeReservations(response.data);
         // console.log("line64",seeReservations)
